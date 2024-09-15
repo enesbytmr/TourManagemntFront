@@ -73,6 +73,18 @@
       "TEXT": "Dashboard",
       "BADGE": "03"
     },
+    "TOUR": {
+      "TEXT": "Tour",
+      "LIST": {
+        "ADDTOUR": "Add Tour",
+        "TOURLIST": "Tour List",
+        "ACTIVETOURS": "Active Tours",
+        "INACTIVETOURS": "Inactive Tours"
+      }
+    },
+    "CUSTOMERS": {
+      "TEXT": "Customers"
+    },
     "LAYOUTS": {
       "TEXT": "Layouts",
       "LIST": {

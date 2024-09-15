@@ -18,10 +18,35 @@ export const MENU: MenuItem[] = [
     },
     {
         id: 3,
-        label: 'MENUITEMS.CALENDAR.TEXT',
-        icon: 'ri-calendar-2-line',
-        link: '/calendar'
-    },
+        label: 'MENUITEMS.TOUR.TEXT',
+        icon: 'ri-calendar-line',
+        subItems: [
+          {
+            id: 4,
+            label: 'MENUITEMS.TOUR.LIST.ADDTOUR',
+            link: '/tour/add-tour',
+            parentId: 3
+          },
+          {
+            id: 5,
+            label: 'MENUITEMS.TOUR.LIST.TOURLIST',
+            link: '/tour/tour-list',
+            parentId: 3
+          },
+          {
+            id: 6,
+            label: 'MENUITEMS.TOUR.LIST.ACTIVETOURS',
+            link: '/tour/active-tours',
+            parentId: 3
+          },
+          {
+            id: 7,
+            label: 'MENUITEMS.TOUR.LIST.INACTIVETOURS',
+            link: '/tour/inactive-tours',
+            parentId: 3
+          }
+        ]
+      },
     {
         id: 4,
         label: 'MENUITEMS.CHAT.TEXT',
