@@ -47,98 +47,76 @@ export const MENU: MenuItem[] = [
           }
         ]
       },
-    {
-        id: 4,
-        label: 'MENUITEMS.CHAT.TEXT',
-        icon: 'ri-chat-1-line',
-        link: '/chat'
-    },
-    {
-        id: 5,
-        label: 'MENUITEMS.ECOMMERCE.TEXT',
-        icon: 'ri-store-2-line',
+      {
+        id: 8,
+        label: 'MENUITEMS.CUSTOMERS.TEXT',
+        icon: 'ri-user-line',
+        subItems: [
+          {
+            id: 9,
+            label: 'MENUITEMS.CUSTOMERS.LIST.CUSTOMERLIST',
+            link: '/customers/customers-list',
+            parentId: 8
+          }
+        ]
+      },
+      {
+        id: 9,
+        label: 'MENUITEMS.HOTEL.TEXT',
+        icon: 'ri-hotel-line',
         subItems: [
             {
-                id: 6,
-                label: 'MENUITEMS.ECOMMERCE.LIST.PRODUCTS',
-                link: '/ecommerce/products',
-                parentId: 5
-            },
-            {
-                id: 7,
-                label: 'MENUITEMS.ECOMMERCE.LIST.PRODUCTDETAIL',
-                link: '/ecommerce/products/1',
-                parentId: 5
-            },
-            {
-                id: 8,
-                label: 'MENUITEMS.ECOMMERCE.LIST.ORDERS',
-                link: '/ecommerce/orders',
-                parentId: 5
-            },
-            {
-                id: 9,
-                label: 'MENUITEMS.ECOMMERCE.LIST.CUSTOMERS',
-                link: '/ecommerce/customers',
-                parentId: 5
-            },
-            {
                 id: 10,
-                label: 'MENUITEMS.ECOMMERCE.LIST.CART',
-                link: '/ecommerce/cart',
-                parentId: 5
+                label: 'MENUITEMS.HOTEL.LIST.ADDHOTEL',
+                link: '/hotel/add-hotel',
+                parentId: 9
             },
             {
                 id: 11,
-                label: 'MENUITEMS.ECOMMERCE.LIST.CHECKOUT',
-                link: '/ecommerce/checkout',
-                parentId: 5
-            },
-            {
-                id: 12,
-                label: 'MENUITEMS.ECOMMERCE.LIST.SHOPS',
-                link: '/ecommerce/shops',
-                parentId: 5
-            },
-            {
-                id: 13,
-                label: 'MENUITEMS.ECOMMERCE.LIST.ADDPRODUCT',
-                link: '/ecommerce/add-product',
-                parentId: 5
-            },
-        ]
-    },
-    {
-        id: 14,
-        label: 'MENUITEMS.EMAIL.TEXT',
-        icon: 'ri-mail-send-line',
-        subItems: [
-            {
-                id: 15,
-                label: 'MENUITEMS.EMAIL.LIST.INBOX',
-                link: '/email/inbox',
-                parentId: 14
-            },
-            {
-                id: 16,
-                label: 'MENUITEMS.EMAIL.LIST.READEMAIL',
-                link: '/email/read/1',
-                parentId: 14
+                label: 'MENUITEMS.HOTEL.LIST.HOTELLIST',
+                link: '/hotel/hotel-list',
+                parentId: 9
             }
         ]
-    },
-    {
+    },{
+        id: 12,
+        label: 'MENUITEMS.ROOM.TEXT',
+        icon: 'ri-hotel-bed-line',
+        subItems: [
+          {
+            id: 13,
+            label: 'MENUITEMS.ROOM.LIST.ADDROOM',
+            link: '/room/add-room',
+            parentId: 12
+          },
+          {
+            id: 14,
+            label: 'MENUITEMS.ROOM.LIST.ROOMLIST',
+            link: '/room/room-list',
+            parentId: 12
+          }
+        ]
+      },{
         id: 15,
-        label: 'MENUITEMS.KANBAN.TEXT',
-        icon: 'ri-artboard-2-line',
-        link: '/kanban-board'
-    },
+        label: 'MENUITEMS.RESERVATION.TEXT',
+        icon: 'ri-calendar-check-line', // You can choose an appropriate icon
+        subItems: [
+          {
+            id: 16,
+            label: 'MENUITEMS.RESERVATION.LIST.ADDRESERVATION',
+            link: '/reservation/add-reservation',
+            parentId: 15
+          },
+          {
+            id: 17,
+            label: 'MENUITEMS.RESERVATION.LIST.RESERVATIONLIST',
+            link: '/reservation/reservation-list',
+            parentId: 15
+          }
+        ]
+      },
     {
-        id: 16,
-        isLayout: true
-    },
-    {
-        id: 17,
+        id: 18,
         label: 'MENUITEMS.PAGES.TEXT',
         isTitle: true
     },

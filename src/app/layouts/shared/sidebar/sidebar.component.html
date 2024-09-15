@@ -7,7 +7,7 @@
       <!-- Left Menu Start -->
       <ul class="metismenu list-unstyled" id="side-menu" #sideMenu>
 
-        @for(item of menuItems;track $index){
+                @for(item of menuItems;track $index){
         @if(item.isTitle){
         <li class="menu-title">{{ item.label | translate }}</li>
         }@else if(item.isLayout){

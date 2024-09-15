@@ -16,11 +16,6 @@ import { DndModule } from 'ngx-drag-drop';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { CalendarComponent } from './calendar/calendar.component';
-import { ChatComponent } from './chat/chat.component';
-import { EcommerceModule } from './ecommerce/ecommerce.module';
-import { KanbanComponent } from './kanban/kanban.component';
-import { EmailModule } from './email/email.module';
 import { UIModule } from './ui/ui.module';
 import { IconsModule } from './icons/icons.module';
 import { ChartModule } from './chart/chart.module';
@@ -31,7 +26,7 @@ import { MapsModule } from './maps/maps.module';
 
 
 @NgModule({
-  declarations: [DashboardComponent, CalendarComponent, ChatComponent, KanbanComponent],
+  declarations: [DashboardComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -46,7 +41,6 @@ import { MapsModule } from './maps/maps.module';
     NgApexchartsModule,
     DndModule,
     FullCalendarModule,
-    EcommerceModule, EmailModule,
     IconsModule,
     ChartModule,
     FormModule,

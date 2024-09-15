@@ -1,0 +1,50 @@
+<p>customers-list works!</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Email</th>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Phone</th>
+      <th>Ethnicity</th>
+      <th>TC No</th>
+      <th>Work Field</th>
+      <th>Birthday</th>
+      <th>Passport No</th>
+      <th>Passport Type</th>
+      <th>Schengen Status</th>
+      <th>Company Info</th>
+      <th>Passport Start Date</th>
+      <th>Passport End Date</th>
+      <th>Visa End Date</th>
+      <th>Passport JPG URL</th>
+      <th>Backup 1</th>
+      <th>Backup 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let customer of customers">
+      <td>{{ customer.id }}</td>
+      <td>{{ customer.email }}</td>
+      <td>{{ customer.name }}</td>
+      <td>{{ customer.surname }}</td>
+      <td>{{ customer.phone }}</td>
+      <td>{{ customer.ethnicity }}</td>
+      <td>{{ customer.tc_no }}</td>
+      <td>{{ customer.work_field }}</td>
+      <td>{{ customer.birthday }}</td>
+      <td>{{ customer.passport_no }}</td>
+      <td>{{ customer.passport_type }}</td>
+      <td>{{ customer.schengen_status }}</td>
+      <td>{{ customer.company_info }}</td>
+      <td>{{ customer.passport_start_date }}</td>
+      <td>{{ customer.passport_end_date }}</td>
+      <td>{{ customer.visa_end_date }}</td>
+      <td>{{ customer.passport_jpg_url }}</td>
+      <td>{{ customer.backup_1 }}</td>
+      <td>{{ customer.backup_2 }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -83,8 +83,33 @@
       }
     },
     "CUSTOMERS": {
-      "TEXT": "Customers"
+      "TEXT": "Customers",
+      "LIST": {
+        "CUSTOMERLIST": "Customer List"
+      }
     },
+    "HOTEL": {
+      "TEXT": "Hotel",
+      "LIST": {
+        "ADDHOTEL": "Add Hotel",
+        "HOTELLIST": "Hotel List"
+      }
+    },
+    "ROOM": {
+      "TEXT": "Room",
+      "LIST": {
+        "ADDROOM": "Add Room",
+        "ROOMLIST": "Room List"
+      }
+      
+    },"RESERVATION": {
+      "TEXT": "Reservation",
+      "LIST": {
+        "ADDRESERVATION": "Add Reservation",
+        "RESERVATIONLIST": "Reservation List"
+      }
+    },
+
     "LAYOUTS": {
       "TEXT": "Layouts",
       "LIST": {
@@ -101,36 +126,6 @@
     },
     "APPS": {
       "TEXT": "Apps"
-    },
-    "CALENDAR": {
-      "TEXT": "Calendar"
-    },
-    "CHAT": {
-      "TEXT": "Chat",
-      "BADGE": "New"
-    },
-    "ECOMMERCE": {
-      "TEXT": "Ecommerce",
-      "LIST": {
-        "PRODUCTS": "Products",
-        "PRODUCTDETAIL": "Product Detail",
-        "ORDERS": "Orders",
-        "CUSTOMERS": "Customers",
-        "CART": "Cart",
-        "CHECKOUT": "Checkout",
-        "SHOPS": "Shops",
-        "ADDPRODUCT": "Add Product"
-      }
-    },
-    "EMAIL": {
-      "TEXT": "Email",
-      "LIST": {
-        "INBOX": "Inbox",
-        "READEMAIL": "Read Email"
-      }
-    },
-    "KANBAN": {
-      "TEXT": "Kanban Board"
     },
     "PAGES": {
       "TEXT": "Pages"
@@ -239,5 +234,6 @@
         }
       }
     }
+    
   }
 }
