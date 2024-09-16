@@ -19,8 +19,14 @@ import { HorizontaltopbarComponent } from './horizontaltopbar/horizontaltopbar.c
 import { HorizontalnavbarComponent } from './horizontalnavbar/horizontalnavbar.component';
 
 @NgModule({
-  // tslint:disable-next-line: max-line-length
-  declarations: [TopbarComponent, FooterComponent, SidebarComponent, RightsidebarComponent, HorizontaltopbarComponent, HorizontalnavbarComponent],
+  declarations: [
+    TopbarComponent,
+    FooterComponent,
+    SidebarComponent,
+    RightsidebarComponent,
+    HorizontaltopbarComponent,
+    HorizontalnavbarComponent
+  ],
   imports: [
     CommonModule,
     TranslateModule,
@@ -31,7 +37,14 @@ import { HorizontalnavbarComponent } from './horizontalnavbar/horizontalnavbar.c
     FormsModule,
     ReactiveFormsModule
   ],
-  exports: [TopbarComponent, FooterComponent, SidebarComponent, RightsidebarComponent, HorizontaltopbarComponent, HorizontalnavbarComponent],
+  exports: [
+    TopbarComponent,
+    FooterComponent,
+    SidebarComponent,
+    RightsidebarComponent,
+    HorizontaltopbarComponent,
+    HorizontalnavbarComponent
+  ],
   providers: [LanguageService]
 })
 export class SharedModule { }

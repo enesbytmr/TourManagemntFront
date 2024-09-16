@@ -22,6 +22,8 @@ import { FakeBackendInterceptor } from './core/helpers/fake-backend';
 import { HotelModule } from './pages/hotel/hotel.module';
 import { RoomModule } from './pages/room/room.module';
 import { ReservationModule } from './pages/reservation/reservation.module';
+import { TourModule } from './pages/tour/tour.module';
+import { RouterModule } from '@angular/router';
 
 if (environment.defaultauth === 'firebase') {
   initFirebaseBackend(environment.firebaseConfig);
@@ -56,6 +58,8 @@ export function createTranslateLoader(http: HttpClient): any {
     HotelModule,
     RoomModule,
     ReservationModule,
+    TourModule, // TourModule eklendi
+    RouterModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

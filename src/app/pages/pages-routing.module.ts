@@ -13,6 +13,11 @@ const routes: Routes = [
     { path: 'form', loadChildren: () => import('./form/form.module').then(m => m.FormModule) },
     { path: 'tables', loadChildren: () => import('./tables/tables.module').then(m => m.TablesModule) },
     { path: 'maps', loadChildren: () => import('./maps/maps.module').then(m => m.MapsModule) },
+    { path: 'tour', loadChildren: () => import('./tour/tour.module').then(m => m.TourModule) },
+    { path: 'customers', loadChildren: () => import('./customers/customers.module').then(m => m.CustomersModule) },
+    { path: 'hotel', loadChildren: () => import('./hotel/hotel.module').then(m => m.HotelModule) },
+    { path: 'room', loadChildren: () => import('./room/room.module').then(m => m.RoomModule) },
+    { path: 'reservation', loadChildren: () => import('./reservation/reservation.module').then(m => m.ReservationModule) }
 ];
 
 @NgModule({

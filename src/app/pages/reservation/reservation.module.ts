@@ -5,11 +5,13 @@ import { ReservationListComponent } from './reservation-list/reservation-list.co
 import { ReservationRoutingModule } from './reservation-routing.module';
 
 @NgModule({
+  declarations: [
+    AddReservationComponent,
+    ReservationListComponent
+  ],
   imports: [
     CommonModule,
-    ReservationRoutingModule,
-    AddReservationComponent, // Import standalone component
-    ReservationListComponent // Import standalone component
+    ReservationRoutingModule
   ]
 })
 export class ReservationModule { }

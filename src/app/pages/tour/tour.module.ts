@@ -8,13 +8,15 @@ import { ActiveToursComponent } from './active-tours/active-tours.component';
 import { InactiveToursComponent } from './inactive-tours/inactive-tours.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    TourRoutingModule,
+  declarations: [
     AddTourComponent,
     TourListComponent,
     ActiveToursComponent,
     InactiveToursComponent
+  ],
+  imports: [
+    CommonModule,
+    TourRoutingModule
   ]
 })
 export class TourModule { }
