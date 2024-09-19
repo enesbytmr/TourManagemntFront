@@ -1,1 +1,85 @@
-<p>tour-list works!</p>
+<div class="container-fluid">
+  <!-- Sayfa Başlığı ve Breadcrumb 
+  <app-pagetitle
+    [title]="'Tour List'"
+    [breadcrumbItems]="breadCrumbItems"
+  ></app-pagetitle>-->
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-body">
+          <!-- Başlık ve Yeni Tur Ekle Butonu -->
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h4 class="card-title mb-4">Tours</h4>
+            </div>
+            <div class="col-sm-6">
+              <div class="text-sm-end">
+                <a
+                  routerLink="/add-tour"
+                  class="btn btn-success waves-effect waves-light"
+                >
+                  <i class="mdi mdi-plus me-2"></i> Add New Tour
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tur Tablosu -->
+          <div class="table-responsive">
+            <table class="table table-hover table-bordered table-sm">
+              <thead class="table-light">
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Country</th>
+                  <th>City</th>
+                  <th>Price</th>
+                  <th>Start Date</th>
+                  <th>End Date</th>
+                  <th>Guide</th>
+                  <th>Schengen Required?</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let tour of tours; let i = index">
+                  <td>{{ tour.id }}</td>
+                  <td>{{ tour.name }}</td>
+                  <td>{{ tour.country }}</td>
+                  <td>{{ tour.city }}</td>
+                  <td>{{ tour.price | currency : "TRY" }}</td>
+                  <td>{{ tour.start_date | date : "dd/MM/yyyy" }}</td>
+                  <td>{{ tour.end_date | date : "dd/MM/yyyy" }}</td>
+                  <td>{{ tour.guide }}</td>
+                  <td>{{ tour.schengen_required ? "Yes" : "No" }}</td>
+                  <td>
+                    <a
+                      href="javascript:void(0);"
+                      class="me-3 text-primary"
+                      ngbTooltip="Edit"
+                    >
+                      <i class="mdi mdi-pencil font-size-18"></i>
+                    </a>
+                    <a
+                      href="javascript:void(0);"
+                      class="text-danger"
+                      ngbTooltip="Delete"
+                    >
+                      <i class="mdi mdi-trash-can font-size-18"></i>
+                    </a>
+                  </td>
+                </tr>
+                <tr *ngIf="tours.length === 0">
+                  <td colspan="10" class="text-center">No tours found.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- Gerekirse sayfalama ekleyebilirsiniz -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
