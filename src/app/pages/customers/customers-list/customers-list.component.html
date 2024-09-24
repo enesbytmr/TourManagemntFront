@@ -1,1 +1,91 @@
-<p>customers-list works!</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+              <!-- Başlık ve Yeni Tur Ekle Butonu -->
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h4 class="card-title mb-4">Customers</h4>
+                </div>
+                <div class="col-sm-6">
+                    <div class="text-sm-end">
+                        <a routerLink="/add-customer" class="btn btn-success waves-effect waves-light">
+                            <i class="mdi mdi-plus me-2"></i> Add New Customer
+                        </a>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered table-sm">
+                      <thead class="table-light">
+                        <tr>
+                          <th>ID</th>
+                          <th>Name</th>
+                          <th>Surname</th>
+                          <th>email</th>
+                          <th>phone</th>
+                          <th>ethnicity</th>
+                          <th>tc_no</th>
+                          <th>work_field</th>
+                          <th>birthday</th>
+                          <th>passport_no</th>
+                          <th>passport_type</th>
+                          <th>schengen_status</th>
+                          <th>company_info</th>
+                          <th>passport_start_date</th>
+                          <th>passport_end_date</th>
+                          <th>visa_end_date</th>
+                          <th>passport_jpg_url</th>
+                          <th>backup_1</th>
+                          <th>Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let customer of customers; let i = index">
+                          <td>{{ customer.id }}</td>
+                          <td>{{ customer.name }}</td>
+                          <td>{{ customer.surname }}</td>
+                          <td>{{ customer.email }}</td>
+                          <td>{{ customer.phone }}</td>
+                          <td>{{ customer.ethnicity }}</td>
+                          <td>{{ customer.tc_no }}</td>
+                          <td>{{ customer.work_field }}</td>
+                          <td>{{ customer.birthday }}</td>
+                          <td>{{ customer.passport_no }}</td>
+                          <td>{{ customer.passport_type }}</td>
+                          <td>{{ customer.schengen_status }}</td>
+                          <td>{{ customer.company_info }}</td>
+                          <td>{{ customer.passport_start_date }}</td>
+                          <td>{{ customer.passport_end_date }}</td>
+                          <td>{{ customer.visa_end_date }}</td>
+                          <td>{{ customer.passport_jpg_url }}</td>
+                          <td>{{ customer.backup_1 }}</td>
+                           <td> <a
+                              href="javascript:void(0);"
+                              class="me-3 text-primary"
+                              ngbTooltip="Edit"
+                            >
+                              <i class="mdi mdi-pencil font-size-18"></i>
+                            </a>
+                            <a
+                              href="javascript:void(0);"
+                              class="text-danger"
+                              ngbTooltip="Delete"
+                            >
+                              <i class="mdi mdi-trash-can font-size-18"></i>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr *ngIf="customers.length === 0">
+                          <td colspan="10" class="text-center">No tours found.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- Gerekirse sayfalama ekleyebilirsiniz -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>

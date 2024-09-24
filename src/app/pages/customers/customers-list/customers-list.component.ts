@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { CustomerService } from '../customer.service';
+//import { CustomerService } from '../customer.service';
 import { Customer } from '../customer.model';
+import { CUSTOMERS } from '../customer-data';
 
 @Component({
   selector: 'app-customers-list',
@@ -10,11 +11,21 @@ import { Customer } from '../customer.model';
 export class CustomersListComponent implements OnInit {
   customers: Customer[] = [];
 
-  constructor(private customerService: CustomerService) {}
+   // Breadcrumb öğeleri
+   breadCrumbItems: Array<{}>;
 
-  ngOnInit(): void {
-    this.customerService.getCustomers().subscribe((data: Customer[]) => {
-      this.customers = data;
-    });
+   constructor() {}
+ 
+   ngOnInit(): void {
+     this.breadCrumbItems = [
+       { label: "Nazox" },
+       { label: "Customers List", active: true },
+     ];
+     this._fetchData();
+   }
+ 
+   private _fetchData() {
+     this.customers = CUSTOMERS;
+   }
   }
-}
+
